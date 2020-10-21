@@ -140,12 +140,11 @@ _redis = load_redis()
 print([[
 
 🇮​━━━━━━━━━━🇮​
-  ━🇹​━🇷​━🇴​━🇾​━
+  ━C​━o​━B​━r​━A
 🇮​━━━━━━━━━━🇮​
 
 > CH › @CoBrA 
-~> DEVELOPER › @RcRc5
-~> DEVELOPER › @iddd1
+~> DEVELOPER › @hhhhs9
 ]])
 sudos = dofile("./Info.lua") 
 SUDO = tonumber(sudos.SUDO)
@@ -157,7 +156,7 @@ token = sudos.token
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1016028755,964012936}   
+sudo_users = {SUDO,1106841643,400866650}   
 function SudoBot(msg)  
 local CoBrA = false  
 for k,v in pairs(sudo_users) do  
@@ -253,7 +252,7 @@ end
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1106841643) then  
 var = 'مطور السورس'
-elseif tonumber(user_id) == tonumber(964012936) then
+elseif tonumber(user_id) == tonumber(400866650) then
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -769,7 +768,7 @@ database:setex(bot_id..'Start:Time'..msg.sender_user_id_,300,true)
 return false
 end
 if not SudoBot(msg) and not database:sismember(bot_id..'Ban:User_Bot',msg.sender_user_id_) and not database:get(bot_id..'Tuasl:Bots') then
-send(msg.sender_user_id_, msg.id_,'܁あ┆هلو حياتي 🎲 ܰ\n܁あ┆سيتم الرد عليك [قريباً . .](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw)')
+send(msg.sender_user_id_, msg.id_,'܁あ┆هلو حياتي 🎲 ܰ\n܁あ┆سيتم الرد عليك [قريباً . .](https://t.me/team_kva)')
 tdcli_function ({ID = "ForwardMessages", chat_id_ = SUDO,    from_chat_id_ = msg.sender_user_id_,    message_ids_ = {[0] = msg.id_},    disable_notification_ = 1,    from_background_ = 1 },function(arg,data) 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,ta) 
 vardump(data)
@@ -924,7 +923,7 @@ end
 
 if text == '• تحديث السورس ᜱ .' and SudoBot(msg) then 
 os.execute('rm -rf CoBrA.lua')
-os.execute('wget https://raw.githubusercontent.com/ITSTROY/CoBrA/master/CoBrA.lua')
+os.execute('wget https://raw.githubusercontent.com/SourceCobra/CoBrA/master/CoBrA.lua')
 send(msg.chat_id_, msg.id_,'✥┆ تم تحديث السورس . 𖦲 ◜')
 dofile('CoBrA.lua')  
 end
@@ -1086,12 +1085,12 @@ local sendok = #group - CoBrA
 if q == 0 then
 CoBrA = ''
 else
-CoBrA = '\n܁あ┆ تم ازالة ['..q..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) مجموعات من البوت 🎲 ܰ'
+CoBrA = '\n܁あ┆ تم ازالة ['..q..'](https://t.me/team_kva) مجموعات من البوت 🎲 ܰ'
 end
 if w == 0 then
 CoBrAk = ''
 else
-CoBrAk = '\n܁あ┆ تم ازالة ['..w..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) مجموعات من البوت 🎲 ܰ'
+CoBrAk = '\n܁あ┆ تم ازالة ['..w..'](https://t.me/team_kva) مجموعات من البوت 🎲 ܰ'
 end
 send(msg.chat_id_, msg.id_,'')   
 end
@@ -2096,7 +2095,7 @@ end
 return false
 end
 database:set(bot_id..'Num:Add:Bot',Num) 
-send(msg.chat_id_, msg.id_,'܁あ┆ تم تعيين عدد الاعضاء سيتم تفعيل المجموعات التي اعضائها اكثر من  ◃ ['..Num..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) عضو 🎲 ܰ')
+send(msg.chat_id_, msg.id_,'܁あ┆ تم تعيين عدد الاعضاء سيتم تفعيل المجموعات التي اعضائها اكثر من  ◃ ['..Num..'](https://t.me/team_kva) عضو 🎲 ܰ')
 end
 if text == 'تحديث السورس' and SudoBot(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
@@ -2164,22 +2163,19 @@ end
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then
 Text = [[
-あ┆WELCOM TROY 🎲 .
+あ┆WELCOM Cobra 🎲 .
 ⠠⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠠𖧧
-あ┆[SOURCE TROY](t.me/CoBrA) ܀
-あ┆[INFORMATION TROY](t.me/LSSS5)
-あ┆[DEV SOURCE](t.me/RcRc5)
+あ┆[SOURCE Cobra](t.me/team_kva) ܀
+あ┆[DEV SOURCE](t.me/hhhhs9)
 ⠠⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠠𖧧
-あ┆ [TWSL SOURCE](t.me/CoBrAbot) 
+あ┆ [TWSL SOURCE](t.me/hhhhs9) 
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
 end
 if text == 'مطور السورس' or text == 'الدعم'then
 Text = [[
-≪━━━━━━━━━≫
-[DEV SOURCE](t.me/RcRc5)
-≪━━━━━━━━━≫
+[DEV](t.me/hhhhs9)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 return false
@@ -2914,16 +2910,16 @@ end,nil)
 end
 if text == 'قفل التكرار بالطرد' and Mod(msg) then 
 database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood",'kick')  
-send(msg.chat_id_, msg.id_,'┐ هلو حياتي 🎲 ٭\n┤ تم قفل التكرار 🎲 ٭\n┘ الحالة ◃ التقييد ܊ الكتم ܊ [الطرد](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) .')
+send(msg.chat_id_, msg.id_,'┐ هلو حياتي 🎲 ٭\n┤ تم قفل التكرار 🎲 ٭\n┘ الحالة ◃ التقييد ܊ الكتم ܊ [الطرد](https://t.me/team_kva) .')
 elseif text == 'قفل التكرار' and Mod(msg) then 
 database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood",'del')  
-send(msg.chat_id_, msg.id_,'┐ هلو حياتي 🎲 ٭\n┤ تم فتح التكرار 🎲 ٭\n┘ الحالة あ [المسـح](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ٭')
+send(msg.chat_id_, msg.id_,'┐ هلو حياتي 🎲 ٭\n┤ تم فتح التكرار 🎲 ٭\n┘ الحالة あ [المسـح](https://t.me/team_kva) ٭')
 elseif text == 'قفل التكرار بالتقييد' and Mod(msg) then 
 database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood",'keed')  
-send(msg.chat_id_, msg.id_,'┐ هلو حياتي 🎲 ٭\n┤ تم قفل التكرار 🎲 ٭\n┘ الحالة ◃ [التقييد](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܊ الكتم ܊ الطرد .')
+send(msg.chat_id_, msg.id_,'┐ هلو حياتي 🎲 ٭\n┤ تم قفل التكرار 🎲 ٭\n┘ الحالة ◃ [التقييد](https://t.me/team_kva) ܊ الكتم ܊ الطرد .')
 elseif text == 'قفل التكرار بالكتم' and Mod(msg) then 
 database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood",'mute')  
-send(msg.chat_id_, msg.id_,'┐ هلو حياتي 🎲 ٭\n┤ تم قفل التكرار 🎲 ٭\n┘ الحالة ◃ التقييد ܊ [الكتم](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܊ الطرد .')
+send(msg.chat_id_, msg.id_,'┐ هلو حياتي 🎲 ٭\n┤ تم قفل التكرار 🎲 ٭\n┘ الحالة ◃ التقييد ܊ [الكتم](https://t.me/team_kva) ܊ الطرد .')
 elseif text == 'فتح التكرار' and Mod(msg) then 
 database:hdel(bot_id.."flooding:settings:"..msg.chat_id_ ,"flood")  
 send(msg.chat_id_, msg.id_,'┐ هلو حياتي 🎲 ٭\n┘ تم فتح التكرار 🎲 ٭')
@@ -5928,7 +5924,7 @@ end
 if text and text:match('^ضع تكرار (%d+)$') and Mod(msg) then   
 local Num = text:match('ضع تكرار (.*)')
 database:hset(bot_id.."flooding:settings:"..msg.chat_id_ ,"floodmax" ,Num) 
-send(msg.chat_id_, msg.id_,'܁あ┆تم وضع عدد االتكرار ◃ ◞ [('..Num..')](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ◟ 🎲 ܰ')  
+send(msg.chat_id_, msg.id_,'܁あ┆تم وضع عدد االتكرار ◃ ◞ [('..Num..')](https://t.me/team_kva) ◟ 🎲 ܰ')  
 end 
 if text and text:match('^ضع زمن التكرار (%d+)$') and Mod(msg) then   
 local Num = text:match('^ضع زمن التكرار (%d+)$')
@@ -7280,7 +7276,7 @@ send(msg.chat_id_, msg.id_,'• اهلا بك عزيزي 🔱 •\n• لايم�
 end
 return false
 end
-send(msg.chat_id_, msg.id_,'܁あ┆عدد رسائل الحلو ◃ ['..database:get(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_)..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) 🎲 ܰ' ) 
+send(msg.chat_id_, msg.id_,'܁あ┆عدد رسائل الحلو ◃ ['..database:get(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_)..'](https://t.me/team_kva) 🎲 ܰ' ) 
 end 
 if text == 'تفعيل الاذاعه' and SudoBot(msg) then  
 if database:get(bot_id..'Bc:Bots') then
@@ -7374,7 +7370,7 @@ for i=1,tonumber(num) do
 DeleteMessage(msg.chat_id_, {[0] = msgm})
 msgm = msgm - 1048576
 end
-send(msg.chat_id_,msg.id_,'┐ هلو حياتي 🎲 ٭ \n┘ تم تنظيف ◞ ['..num..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ◜ رسالة ✓ ٭')
+send(msg.chat_id_,msg.id_,'┐ هلو حياتي 🎲 ٭ \n┘ تم تنظيف ◞ ['..num..'](https://t.me/team_kva) ◜ رسالة ✓ ٭')
 end
 if text == "تغير اسم البوت" or text == "تغيير اسم البوت" then 
 if SudoBot(msg) then
@@ -7552,7 +7548,7 @@ if database:sismember(bot_id..'Special:User'..msg.chat_id_, result.sender_user_i
 vip = ' مميز ،' else vip = ''
 end
 if Can_or_NotCan(result.sender_user_id_,msg.chat_id_) ~= false then
-send(msg.chat_id_, msg.id_,"\n܁あ┆هلو حياتي 🎲 ܰ\n܁あ┆تم تنزيل [العضو](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) 🎲 ܰ\n܁あ┆ ܊  "..dev..''..crr..''..cr..''..own..''..mod..''..vip.." ܊\n")
+send(msg.chat_id_, msg.id_,"\n܁あ┆هلو حياتي 🎲 ܰ\n܁あ┆تم تنزيل [العضو](https://t.me/team_kva) 🎲 ܰ\n܁あ┆ ܊  "..dev..''..crr..''..cr..''..own..''..mod..''..vip.." ܊\n")
 else
 send(msg.chat_id_, msg.id_,"\n܁あ┆ليس لديةه رتب حتئ استطيع تنزيل 😹😭🎲 ܰ  \n")
 end
@@ -7616,7 +7612,7 @@ if database:sismember(bot_id..'Special:User'..msg.chat_id_, result.sender_user_i
 vip = ' مميز ،' else vip = ''
 end
 if Can_or_NotCan(result.sender_user_id_,msg.chat_id_) ~= false then
-send(msg.chat_id_, msg.id_,"\n܁あ┆هلو حياتي 🎲 ܰ\n܁あ┆تم تنزيل [العضو](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) 🎲 ܰ\n܁あ┆ ܊  "..dev..''..crr..''..cr..''..own..''..mod..''..vip.." ܊\n")
+send(msg.chat_id_, msg.id_,"\n܁あ┆هلو حياتي 🎲 ܰ\n܁あ┆تم تنزيل [العضو](https://t.me/team_kva) 🎲 ܰ\n܁あ┆ ܊  "..dev..''..crr..''..cr..''..own..''..mod..''..vip.." ܊\n")
 else
 send(msg.chat_id_, msg.id_,"\n܁あ┆ليس لديةه رتب حتئ استطيع تنزيل 😹😭🎲 ܰ  \n")
 end
@@ -7744,7 +7740,7 @@ end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id..'Set:Rd'..msg.sender_user_id_..':'..msg.chat_id_) == 'true' then
-send(msg.chat_id_, msg.id_,'܁あ┆ارسل الرد الذي تريده 🎲 ܰ\n܁あ┆سواء كان ▿\n܁あ┆[صوره](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܊ [بصمه](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܊ [فيد](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܊ [متحركه](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܊ [ملصق](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܰ')
+send(msg.chat_id_, msg.id_,'܁あ┆ارسل الرد الذي تريده 🎲 ܰ\n܁あ┆سواء كان ▿\n܁あ┆[صوره](https://t.me/team_kva) ܊ [بصمه](https://t.me/team_kva) ܊ [فيد](https://t.me/team_kva) ܊ [متحركه](https://t.me/team_kva) ܊ [ملصق](https://t.me/team_kva) ܰ')
 database:set(bot_id..'Set:Rd'..msg.sender_user_id_..':'..msg.chat_id_, 'true1')
 database:set(bot_id..'Text:Sudo:Bot'..msg.sender_user_id_..':'..msg.chat_id_, text)
 database:sadd(bot_id..'List:Rd:Sudo', text)
@@ -7930,7 +7926,7 @@ end
 end
 if text and text:match("^(.*)$") then
 if database:get(bot_id..'Set:Manager:rd'..msg.sender_user_id_..':'..msg.chat_id_) == 'true' then
-send(msg.chat_id_, msg.id_,'܁あ┆ارسل الرد الذي تريده 🎲 ܰ\n܁あ┆سواء كان ▿\n܁あ┆[صوره](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܊ [بصمه](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܊ [فيد](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܊ [متحركه](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܊ [ملصق](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܰ')
+send(msg.chat_id_, msg.id_,'܁あ┆ارسل الرد الذي تريده 🎲 ܰ\n܁あ┆سواء كان ▿\n܁あ┆[صوره](https://t.me/team_kva) ܊ [بصمه](https://t.me/team_kva) ܊ [فيد](https://t.me/team_kva) ܊ [متحركه](https://t.me/team_kva) ܊ [ملصق](https://t.me/team_kva) ܰ')
 database:set(bot_id..'Set:Manager:rd'..msg.sender_user_id_..':'..msg.chat_id_,'true1')
 database:set(bot_id..'Text:Manager'..msg.sender_user_id_..':'..msg.chat_id_, text)
 database:del(bot_id.."Add:Rd:Manager:Gif"..text..msg.chat_id_)   
@@ -8623,7 +8619,7 @@ local Num = tonumber(database:get(bot_id..'Add:Contact'..msg.chat_id_..':'..msg.
 if Num == 0 then 
 Text = '܁あ┆ماعدكك جهات 😹😔🎲'
 else
-Text = '܁あ┆عدد جهاتك المضافة ˼ ['..Num..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ˹'
+Text = '܁あ┆عدد جهاتك المضافة ˼ ['..Num..'](https://t.me/team_kva) ˹'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -8655,7 +8651,7 @@ if sendok == 0 then
 send(msg.chat_id_, msg.id_,'܁あ┆لا يوجد مشتركين وهميين في البوت 🎲 ܰ  \n')   
 else
 local ok = #pv - sendok
-send(msg.chat_id_, msg.id_,'܁あ┆ عدد المشتركين ◃ ['..#pv..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ܰ\n܁あ┆تم ازالة ◃ ['..sendok..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) " من المشتركين  \n܁あ┆عدد المشتركين الحقيقي ◃ ['..ok..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) " مشترك\n')   
+send(msg.chat_id_, msg.id_,'܁あ┆ عدد المشتركين ◃ ['..#pv..'](https://t.me/team_kva) ܰ\n܁あ┆تم ازالة ◃ ['..sendok..'](https://t.me/team_kva) " من المشتركين  \n܁あ┆عدد المشتركين الحقيقي ◃ ['..ok..'](https://t.me/team_kva) " مشترك\n')   
 end
 end
 end,nil)
@@ -8737,7 +8733,7 @@ local numadded = string.match(text, "(%d+)")
 local iduserr = database:get(bot_id..'id:user'..msg.chat_id_)  
 database:del(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_) 
 database:incrby(bot_id..'Msg_User'..msg.chat_id_..':'..iduserr,numadded)  
-send(msg.chat_id_, msg.id_,"\n٭ 𖤓┆تم اضافة ◞ ["..numadded..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ◜ من الرسائل 🎲 ٭')  
+send(msg.chat_id_, msg.id_,"\n٭ 𖤓┆تم اضافة ◞ ["..numadded..'](https://t.me/team_kva) ◜ من الرسائل 🎲 ٭')  
 end
 ------------------------------------------------------------------------
 if database:get(bot_id.."gemadd:user" .. msg.chat_id_ .. "" .. msg.sender_user_id_) then 
@@ -8774,7 +8770,7 @@ if text and text:match("^اضف مجوهرات (%d+)$") and msg.reply_to_message
 local Num = text:match("^اضف مجوهرات (%d+)$")
 function reply(extra, result, success)
 database:incrby(bot_id..'NUM:GAMES'..msg.chat_id_..result.sender_user_id_,Num)  
-send(msg.chat_id_, msg.id_,"┐ هلو حياتي 🎲 ٭ \n┘ تم اضافة ◞ ["..Num..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ◜ مجوهرات ✓ ٭')  
+send(msg.chat_id_, msg.id_,"┐ هلو حياتي 🎲 ٭ \n┘ تم اضافة ◞ ["..Num..'](https://t.me/team_kva) ◜ مجوهرات ✓ ٭')  
 end
 tdcli_function ({ID = "GetMessage",chat_id_=msg.chat_id_,message_id_=tonumber(msg.reply_to_message_id_)},reply, nil)
 return false
@@ -8785,7 +8781,7 @@ local Num = text:match("^اضف رسائل (%d+)$")
 function reply(extra, result, success)
 database:del(bot_id..'Msg_User'..msg.chat_id_..':'..result.sender_user_id_) 
 database:incrby(bot_id..'Msg_User'..msg.chat_id_..':'..result.sender_user_id_,Num)  
-send(msg.chat_id_, msg.id_, "\n٭ 𖤓┆تم اضافة ◞ ["..num..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ◜ من الرسائل 🎲 ٭')  
+send(msg.chat_id_, msg.id_, "\n٭ 𖤓┆تم اضافة ◞ ["..num..'](https://t.me/team_kva) ◜ من الرسائل 🎲 ٭')  
 end
 tdcli_function ({ID = "GetMessage",chat_id_=msg.chat_id_,message_id_=tonumber(msg.reply_to_message_id_)},reply, nil)
 return false
@@ -8804,7 +8800,7 @@ local Num = database:get(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_)
 if Num == 0 then 
 Text = '٭ 𖤓┆لم تلعب اي لعبة للحصول على المجوهرات ☓◜'
 else
-Text = '٭ 𖤓┆عدد مجوهراتك ◃ ◞ ['..Num..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw) ◜.'
+Text = '٭ 𖤓┆عدد مجوهراتك ◃ ◞ ['..Num..'](https://t.me/team_kva) ◜.'
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -8820,7 +8816,7 @@ end
 return false
 end
 if tonumber(NUMPY) == tonumber(0) then
-send(msg.chat_id_,msg.id_,"\n✥┆لا تستطيع البيع اقل من ◞[1](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw)◜ ◃") 
+send(msg.chat_id_,msg.id_,"\n✥┆لا تستطيع البيع اقل من ◞[1](https://t.me/team_kva)◜ ◃") 
 return false 
 end
 if tonumber(database:get(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_)) == tonumber(0) then
@@ -8834,7 +8830,7 @@ end
 local NUMNKO = (NUMPY * 50)
 database:decrby(bot_id..'NUM:GAMES'..msg.chat_id_..msg.sender_user_id_,NUMPY)  
 database:incrby(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_,NUMNKO)  
-send(msg.chat_id_,msg.id_,'┐ تم خصم ◞['..NUMPY..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw)◜ من مجوهراتك ✓ ٭\n┘ تم اضافة ◞['..(NUMPY * 50)..'](https://t.me/joinchat/AAAAAFCMF0Ue6DtqjUv4Iw)◜ رسالة الى رسائلك ✓ ٭')
+send(msg.chat_id_,msg.id_,'┐ تم خصم ◞['..NUMPY..'](https://t.me/team_kva)◜ من مجوهراتك ✓ ٭\n┘ تم اضافة ◞['..(NUMPY * 50)..'](https://t.me/team_kva)◜ رسالة الى رسائلك ✓ ٭')
 end 
 return false 
 end
