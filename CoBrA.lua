@@ -142,7 +142,7 @@ print([[
   ━C​━o​━B​━r​━A
 🇮​━━━━━━━━━━🇮​
 
-> CH › @CoBrA 
+> CH › @team_kva 
 ~> DEVELOPER › @hhhhs9
 ]])
 sudos = dofile("./Info.lua") 
@@ -152,6 +152,7 @@ bot_id = sudos.token:match("(%d+)")
 token = sudos.token 
 --- start functions ↓
 --------------------------------------------------------------------------------------------------------------
+io.popen("mkdir File_Bot") 
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
@@ -730,7 +731,7 @@ end
 return false
 end
 if SudoBot(msg) then
-local bl = '゠اهلا بيك حياتي 🎲⸼ .\n゠انت المطور الاساسي للبوت 𖧧.\n゠تستطيع التحكم باوامر البوت 𖧧.\n゠من خلال الكيبورد الخاص بك 𖧧.\n゠قناة السورس  ◝ [@CoBrA] ◟ .'
+local bl = '゠اهلا بيك حياتي 🎲⸼ .\n゠انت المطور الاساسي للبوت 𖧧.\n゠تستطيع التحكم باوامر البوت 𖧧.\n゠من خلال الكيبورد الخاص بك 𖧧.\n゠قناة السورس  ◝ [@team_kva] ◟ .'
 local keyboard = {
 	{'• وضع اسم الى البوت 𖠹 .'},
 {'• تعطيل التواصل  × .','• تفعيل التواصل  𖡩 .'},
@@ -870,7 +871,7 @@ if database:get(bot_id..'Free:Bots') then
 database:del(bot_id..'Free:Bots') 
 Text = '\n܁あ┆تم تفعيل البوت لخدمي 🎲 ܰ ' 
 else
-Text = '\n܁あ┆بلتأكيد تم تفعيل البوت الخدمي ?? ܰ  '
+Text = '\n܁あ┆بلتأكيد تم تفعيل البوت الخدمي 🎲 ܰ  '
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -1459,7 +1460,7 @@ tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dat
 if data.username_ ~= false then
 send(msg.chat_id_,0,"⚠┇العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n🚫┇["..CoBrA_Msg.."] \n") 
 else
-send(msg.chat_id_,0,"⚠┇العضو : {["..data.first_name_.."](T.ME/CoBrA)}\n🚫┇["..CoBrA_Msg.."] \n") 
+send(msg.chat_id_,0,"⚠┇العضو : {["..data.first_name_.."](t.me/team_kva)}\n🚫┇["..CoBrA_Msg.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
@@ -1883,7 +1884,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0, "܁あ┆عذرأ يا  ◃ @["..data.username_.."]  🎲 ܰ\n܁あ┆الملصق التي ارسلتهاا تم منعهاا من المجموعةه  🎲 ܰ\n" ) 
 else
-send(msg.chat_id_,0, "܁あ┆عذرأ يا  ◃ ["..data.first_name_.."](T.ME/CoBrA)  🎲 ܰ\n܁あ┆الملصق التي ارسلتهاا تم منعهاا من المجموعةه  🎲 ܰ\n" ) 
+send(msg.chat_id_,0, "܁あ┆عذرأ يا  ◃ ["..data.first_name_.."](t.me/team_kva)  🎲 ܰ\n܁あ┆الملصق التي ارسلتهاا تم منعهاا من المجموعةه  🎲 ܰ\n" ) 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -1903,7 +1904,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0,"܁あ┆عذرأ يا  ◃ @["..data.username_.."]  🎲 ܰ\n܁あ┆الصوره التي ارسلتهاا تم منعهاا من المجموعةه  🎲 ܰ\n" ) 
 else
-send(msg.chat_id_,0,"܁あ┆عذرأ يا  ◃ ["..data.first_name_.."](T.ME/CoBrA)  🎲 ܰ\n܁あ┆الصوره التي ارسلتهاا تم منعهاا من المجموعةه  🎲 ܰ\n") 
+send(msg.chat_id_,0,"܁あ┆عذرأ يا  ◃ ["..data.first_name_.."](t.me/team_kva)  🎲 ܰ\n܁あ┆الصوره التي ارسلتهاا تم منعهاا من المجموعةه  🎲 ܰ\n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -1920,7 +1921,7 @@ tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data
 if data.username_ ~= false then
 send(msg.chat_id_,0,"܁あ┆عذرأ يا  ◃ @["..data.username_.."]  🎲 ܰ\n܁あ┆المتحركةه التي ارسلتهاا تم منعهاا من المجموعةه  🎲 ܰ\n") 
 else
-send(msg.chat_id_,0,"܁あ┆عذرأ يا  ◃ ["..data.first_name_.."](T.ME/CoBrA)  🎲 ܰ\n܁あ┆المتحركةه التي ارسلتهاا تم منعهاا من المجموعةه  🎲 ܰ\n" ) 
+send(msg.chat_id_,0,"܁あ┆عذرأ يا  ◃ ["..data.first_name_.."](t.me/team_kva)  🎲 ܰ\n܁あ┆المتحركةه التي ارسلتهاا تم منعهاا من المجموعةه  🎲 ܰ\n" ) 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})       
@@ -5862,7 +5863,7 @@ local text =
 ' }\n'..'📮┇ الايدي ← { '..idgp..
 ' }\n'..'📮┇ الايدي بالصوره ← { '..idph..
 ' }\n'..'📮┇ الرفع ← { '..setadd..
-' }\n'..'📮┇ الحظر ← { '..banm..' }\n\n┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉  ┉  ┉\n🔖┇ CH » @CoBrA\n'
+' }\n'..'📮┇ الحظر ← { '..banm..' }\n\n┉  ┉  ┉  ┉ ┉  ┉  ┉  ┉  ┉  ┉\n🔖┇ CH » @team_kva\n'
 send(msg.chat_id_, msg.id_,text)     
 end    
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
@@ -9088,7 +9089,7 @@ Text = [[
 ┤ م9 ◂ لعرض اوامر الاعضاء
 ┘ م10 ◂ لعرض اوامر التحشيش
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤂┆[CHanneL SourcE](t.me/CoBrA) 𖥠 .
+𖤂┆[CHanneL SourcE](t.me/team_kva) 𖥠 .
 ]]
 send(msg.chat_id_, msg.id_,(help_text or Text)) 
 return false
@@ -9149,7 +9150,7 @@ Text = [[
 ┤ الانكليزيه
 ┘ الانلاين
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤂┆[CHanneL SourcE](t.me/CoBrA) 𖥠 .
+𖤂┆[CHanneL SourcE](t.me/team_kva) 𖥠 .
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -9190,7 +9191,7 @@ Text = [[
 ┤ الردود
 ┘ صورتي
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤂┆[CHanneL SourcE](t.me/CoBrA) 𖥠 .
+𖤂┆[CHanneL SourcE](t.me/team_kva) 𖥠 .
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -9230,7 +9231,7 @@ Text = [[
 ┤ وصف 
 ┘ تكرار + العدد
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤂┆[CHanneL SourcE](t.me/CoBrA) 𖥠 .
+𖤂┆[CHanneL SourcE](t.me/team_kva) 𖥠 .
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -9272,7 +9273,7 @@ Text = [[
 ┤ امر
 ┘ الاوامر المضافه
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤂┆[CHanneL SourcE](t.me/CoBrA) 𖥠 .
+𖤂┆[CHanneL SourcE](t.me/team_kva) 𖥠 .
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -9321,7 +9322,7 @@ Text = [[
 ┤ تغير امر الاوامر
 ┘ تغير امر م 1 الى حد م 10
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤂┆[CHanneL SourcE](t.me/CoBrA) 𖥠 .
+𖤂┆[CHanneL SourcE](t.me/team_kva) 𖥠 .
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -9380,7 +9381,7 @@ Text = [[
 ┤ الاوامر المضافه 
 ┘ قائمه المنع
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤂┆[CHanneL SourcE](t.me/CoBrA) 𖥠 .
+𖤂┆[CHanneL SourcE](t.me/team_kva) 𖥠 .
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -9417,7 +9418,7 @@ Text = [[
 ┤ مسح المميز عام
 ┘ اذاعه ܊ اذا كان المطور الاساسي مفعلها
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤂┆[CHanneL SourcE](t.me/CoBrA) 𖥠 .
+𖤂┆[CHanneL SourcE](t.me/team_kva) 𖥠 .
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -9500,7 +9501,7 @@ Text = [[
 ┤ تنظيف المشتركين 
 ┘ تنظيف الكروبات
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤂┆[CHanneL SourcE](t.me/CoBrA) 𖥠 .
+𖤂┆[CHanneL SourcE](t.me/team_kva) 𖥠 .
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -9550,7 +9551,7 @@ Text = [[
 ┤ شنو رائيك بهذا ܊ بالرد ܊
 ┘ رزله ٭ هينه ܊ بالرد ܊
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤂┆[CHanneL SourcE](t.me/CoBrA) 𖥠 .
+𖤂┆[CHanneL SourcE](t.me/team_kva) 𖥠 .
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -9588,7 +9589,7 @@ Text = [[
 ┤ زواج
 ┘ طلاك
 ܀⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤⠤܀
-𖤂┆[CHanneL SourcE](t.me/CoBrA) 𖥠 .
+𖤂┆[CHanneL SourcE](t.me/team_kva) 𖥠 .
 ]]
 send(msg.chat_id_, msg.id_,Text) 
 return false
@@ -10641,7 +10642,7 @@ tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,
 if data.username_ ~= false then
 send(msg.chat_id_,0,"⚠┇العضو : {["..data.first_name_.."](T.ME/"..data.username_..")}\n🚫┇["..CoBrAbot.."] \n") 
 else
-send(msg.chat_id_,0,"⚠┇العضو : {["..data.first_name_.."](T.ME/CoBrA)}\n🚫┇["..CoBrAbot.."] \n") 
+send(msg.chat_id_,0,"⚠┇العضو : {["..data.first_name_.."](t.me/team_kva)}\n🚫┇["..CoBrAbot.."] \n") 
 end
 end,nil)   
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_}) 
