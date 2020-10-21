@@ -6,7 +6,7 @@ JSON  = dofile("./library/dkjson.lua")
 URL = require('socket.url')  
 utf8 = require ('lua-utf8') 
 database = redis.connect('127.0.0.1', 6379) 
-id_server = 2342443
+id_server = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a')
 --------------------------------------------------------------------------------------------------------------
 local AutoSet = function() 
 local create = function(data, file, uglify)  
@@ -870,7 +870,7 @@ if database:get(bot_id..'Free:Bots') then
 database:del(bot_id..'Free:Bots') 
 Text = '\n܁あ┆تم تفعيل البوت لخدمي 🎲 ܰ ' 
 else
-Text = '\n܁あ┆بلتأكيد تم تفعيل البوت الخدمي 🎲 ܰ  '
+Text = '\n܁あ┆بلتأكيد تم تفعيل البوت الخدمي ?? ܰ  '
 end
 send(msg.chat_id_, msg.id_,Text) 
 end
@@ -5379,7 +5379,7 @@ texts = usertext..status
 send(msg.chat_id_, msg.id_, texts)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=True&can_restrict_members=false&can_pin_messages=True&can_promote_members=false")
 else
-send(msg.chat_id_, msg.id_, '܁あ┆لايوجد حساب بهذا المعرف  ?? ܰ')
+send(msg.chat_id_, msg.id_, '܁あ┆لايوجد حساب بهذا المعرف  🎲 ܰ')
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
