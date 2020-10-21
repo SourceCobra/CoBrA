@@ -33,7 +33,7 @@ exit 1
 fi
 sudo chmod +x tg
 lua TROYTEAM.lua
-sudo chmod +x TROYTEAM
-sudo chmod +x ./BK
-./BK
+sudo chmod +x CoBrA
+sudo chmod +x ./CA
+./CA
 fi
