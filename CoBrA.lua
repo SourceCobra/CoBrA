@@ -104,12 +104,8 @@ file:write([[
 cd $HOME/CoBrA
 while(true) do
 rm -fr ../.telegram-cli
-if ! screen -list | grep -q "CoBrA"; then
-screen -S CoBrA ./CoBrA R
-fi
 screen -S CoBrA -X kill
 screen -S CoBrA ./CoBrA R
-fi
 done
 ]])  
 file:close() 
