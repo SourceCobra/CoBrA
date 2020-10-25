@@ -926,7 +926,7 @@ end
 
 if text == '• تحديث السورس ᜱ .' and SudoBot(msg) then 
 os.execute('rm -rf CoBrA.lua')
-os.execute('wget https://raw.githubusercontent.com/SourceCobra/CoBrA/master/CoBrA.lua')
+os.execute('wget https://raw.githubusercontent.com/SourceCobra/CoBrA/main/CoBrA.lua')
 send(msg.chat_id_, msg.id_,'✬┆ تم تحديث السورس . 𖦲 ◜')
 dofile('CoBrA.lua')  
 end
@@ -2111,7 +2111,7 @@ end
 return false
 end
 os.execute('rm -rf CoBrA.lua')
-os.execute('wget https://raw.githubusercontent.com/SourceCoBrA/CoBrA/master/CoBrA.lua')
+os.execute('wget https://raw.githubusercontent.com/SourceCobra/CoBrA/main/CoBrA.lua')
 send(msg.chat_id_, msg.id_,'✬┆ تم تحديث السورس . 𖦲 ◜')
 dofile('CoBrA.lua')  
 end
@@ -8608,7 +8608,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n˹ 𖢊 𝑈𝑠??𝑅 𖡻 '..username..' ま .\n˹ 𖢊 𝑖𝐷 𖡻 '..msg.sender_user_id_..' ま .\n˹ 𖢊 𝑆𝑡𝑎𝑆 𖡻 '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ま .\n˹ 𖢊 𝐴𝑢𝑡𝑂 𖡻 '..Total_Msg(Msguser)..' ま .\n˹ 𖢊 𝑀𝑎𝑠𝐺 𖡻 '..Msguser..' ま .\n˹ 𖢊 𝐸𝑑𝑖𝑇 𖡻 '..edit..' ま .\n˹ 𖢊 𝐺𝑎𝑚𝐸 𖡻 '..NUMPGAME..' ま .]\n')   
+send(msg.chat_id_, msg.id_,'[\n˹ 𖢊 𝑈𝑠??𝑅 𖡻 '..username..' ま .\n˹ 𖢊 𝑖𝐷 𖡻 '..msg.sender_user_id_..' ま .\n˹ 𖢊 𝑆??𝑎𝑆 𖡻 '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ま .\n˹ 𖢊 𝐴𝑢𝑡𝑂 𖡻 '..Total_Msg(Msguser)..' ま .\n˹ 𖢊 𝑀𝑎𝑠𝐺 𖡻 '..Msguser..' ま .\n˹ 𖢊 𝐸𝑑𝑖𝑇 𖡻 '..edit..' ま .\n˹ 𖢊 𝐺𝑎𝑚𝐸 𖡻 '..NUMPGAME..' ま .]\n')   
 end
 end
 
