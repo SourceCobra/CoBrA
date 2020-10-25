@@ -655,17 +655,6 @@ return false
 end
 end,nil)   
 end  
-function plugin_CoBrAa(msg)
-for v in io.popen('ls File_Bot'):lines() do
-if v:match(".lua$") then
-plugin = dofile("File_Bot/"..v)
-if plugin.CoBrAa and msg then
-pre_msg = plugin.CoBrAa(msg)
-end
-end
-end
-send(msg.chat_id_, msg.id_,pre_msg)  
-end
 
 --------------------------------------------------------------------------------------------------------------
 function SourceCoBrA(msg,data) -- بداية العمل
@@ -8608,7 +8597,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n˹ 𖢊 𝑈𝑠??𝑅 𖡻 '..username..' ま .\n˹ 𖢊 𝑖𝐷 𖡻 '..msg.sender_user_id_..' ま .\n˹ 𖢊 𝑆??𝑎𝑆 𖡻 '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ま .\n˹ 𖢊 𝐴𝑢𝑡𝑂 𖡻 '..Total_Msg(Msguser)..' ま .\n˹ 𖢊 𝑀𝑎𝑠𝐺 𖡻 '..Msguser..' ま .\n˹ 𖢊 𝐸𝑑𝑖𝑇 𖡻 '..edit..' ま .\n˹ 𖢊 𝐺𝑎𝑚𝐸 𖡻 '..NUMPGAME..' ま .]\n')   
+send(msg.chat_id_, msg.id_,'[\n˹ 𖢊 𝑈𝑠??𝑅 𖡻 '..username..' ま .\n˹ 𖢊 𝑖𝐷 𖡻 '..msg.sender_user_id_..' ま .\n˹ 𖢊 𝑆𝑡𝑎𝑆 𖡻 '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ま .\n˹ 𖢊 𝐴𝑢𝑡𝑂 𖡻 '..Total_Msg(Msguser)..' ま .\n˹ 𖢊 𝑀𝑎𝑠𝐺 𖡻 '..Msguser..' ま .\n˹ 𖢊 𝐸𝑑𝑖𝑇 𖡻 '..edit..' ま .\n˹ 𖢊 𝐺𝑎𝑚𝐸 𖡻 '..NUMPGAME..' ま .]\n')   
 end
 end
 
