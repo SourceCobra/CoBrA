@@ -36,14 +36,14 @@ print('\27[1;31m ↓ لم يتم حفظ')
 end 
 os.execute('lua CoBrA.lua')
 end
-if not database:get(id_server..":SUDO:ID") then
-io.write('\27[0;32m\n ↓ ارسل ايدي المطور الاساسي : \n\27[0;33;49m')
-local SUDOID = io.read()
-if SUDOID ~= '' then
-io.write('\27[0;31m ↓ تم حفظ ايدي المطور √ \n27[0;39;49m')
-database:set(id_server..":SUDO:ID",SUDOID)
+if not database:get(id_server..":SUDO:USERNAME") then
+io.write('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n \27[0;39;49m')
+local SUDOUSERNAME = io.read():gsub('@','')
+if SUDOUSERNAME ~= '' then
+io.write('\n\27[1;34m تم حفظ معرف المطور √\n\27[0;39;49m')
+database:set(id_server..":SUDO:USERNAME",'@'..SUDOUSERNAME)
 else
-print('\27[0;32m\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
+print('\n\27[1;34m لم يتم حفظ معرف المطور :')
 end 
 os.execute('lua CoBrA.lua')
 end
@@ -8597,7 +8597,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n˹ 𖢊 𝑈𝑠??𝑅 𖡻 '..username..' ま .\n˹ 𖢊 𝑖𝐷 𖡻 '..msg.sender_user_id_..' ま .\n˹ 𖢊 𝑆𝑡𝑎𝑆 𖡻 '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ま .\n˹ 𖢊 𝐴𝑢𝑡𝑂 𖡻 '..Total_Msg(Msguser)..' ま .\n˹ 𖢊 𝑀𝑎𝑠𝐺 𖡻 '..Msguser..' ま .\n˹ 𖢊 𝐸𝑑𝑖𝑇 𖡻 '..edit..' ま .\n˹ 𖢊 𝐺𝑎𝑚𝐸 𖡻 '..NUMPGAME..' ま .]\n')   
+send(msg.chat_id_, msg.id_,'[\n˹ 𖢊 𝑈𝑠??𝑅 𖡻 '..username..' ま .\n˹ 𖢊 𝑖𝐷 𖡻 '..msg.sender_user_id_..' ま .\n˹ 𖢊 𝑆𝑡𝑎𝑆 𖡻 '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ま .\n˹ 𖢊 𝐴𝑢𝑡𝑂 𖡻 '..Total_Msg(Msguser)..' ま .\n˹ 𖢊 𝑀𝑎𝑠𝐺 𖡻 '..Msguser..' ま .\n˹ 𖢊 𝐸𝑑𝑖𝑇 𖡻 '..edit..' ま .\n˹ 𖢊 𝐺𝑎𝑚𝐸 ?? '..NUMPGAME..' ま .]\n')   
 end
 end
 
@@ -9956,7 +9956,7 @@ database:set(bot_id..':Set:Moktlf'..msg.chat_id_,name)
 name = string.gsub(name,'😸','😹😹😹😹??😹😹😹😸😹😹😹😹')
 name = string.gsub(name,'☠','💀💀💀💀💀💀💀☠💀💀💀💀💀')
 name = string.gsub(name,'🐼','👻👻👻🐼👻👻👻👻👻👻👻')
-name = string.gsub(name,'🐇','🕊🕊🕊🕊🕊🐇🕊🕊🕊🕊')
+name = string.gsub(name,'??','🕊🕊🕊🕊🕊🐇🕊🕊🕊🕊')
 name = string.gsub(name,'🌑','🌚🌚🌚🌚🌚🌑🌚🌚🌚')
 name = string.gsub(name,'??','🌑🌑🌑🌑🌑🌚🌑🌑🌑')
 name = string.gsub(name,'⭐️','🌟🌟🌟🌟🌟🌟🌟🌟⭐️🌟🌟🌟')
