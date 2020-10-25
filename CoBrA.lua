@@ -21,14 +21,14 @@ file:write(serialized)
 file:close()  
 end  
 if not database:get(id_server..":token") then
-io.write('\27[0;31m\n ↓ ارسل توكن البوت الان :\n\27')
+io.write('\27[0;32m\n ↓ ارسل توكن البوت الان :\n\27[0;39;49m')
 local token = io.read()
 if token ~= '' then
 local url , res = https.request('https://api.telegram.org/bot'..token..'/getMe')
 if res ~= 200 then
-print('\27[1;31m»» توكن البوت غير صحيح ')
+print('\27[0;32m»» توكن البوت غير صحيح ')
 else
-io.write('\27[0;32m ↓ تم حفظ توكن البوت √\n27[0;39;49m')
+io.write('\27[0;31m ↓ تم حفظ توكن البوت √\n27[0;39;49m')
 database:set(id_server..":token",token)
 end 
 else
@@ -37,24 +37,24 @@ end
 os.execute('lua CoBrA.lua')
 end
 if not database:get(id_server..":SUDO:ID") then
-io.write('\27[0;31m\n ↓ ارسل ايدي المطور الاساسي : \n\27[0;33;49m')
+io.write('\27[0;32m\n ↓ ارسل ايدي المطور الاساسي : \n\27[0;33;49m')
 local SUDOID = io.read()
 if SUDOID ~= '' then
-io.write('\27[0;32m ↓ تم حفظ ايدي المطور √ \n27[0;39;49m')
+io.write('\27[0;31m ↓ تم حفظ ايدي المطور √ \n27[0;39;49m')
 database:set(id_server..":SUDO:ID",SUDOID)
 else
-print('\27[0;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
+print('\27[0;32m\n لم يتم حفظ ايدي المطور الاساسي ارسله مره اخره')
 end 
 os.execute('lua CoBrA.lua')
 end
 if not database:get(id_server..":SUDO:USERNAME") then
-io.write('\27[1;31m ↓ ارسل معرف المطور الاساسي :\n \27[0;39;49m')
+io.write('\27[0;32m ↓ ارسل معرف المطور الاساسي :\n \27[0;39;49m')
 local SUDOUSERNAME = io.read():gsub('@','')
 if SUDOUSERNAME ~= '' then
-io.write('\n\27[1;34m تم حفظ معرف المطور √\n\27[0;39;49m')
+io.write('\n\27[0;32m تم حفظ معرف المطور √\n\27[0;39;49m')
 database:set(id_server..":SUDO:USERNAME",'@'..SUDOUSERNAME)
 else
-print('\n\27[1;34m لم يتم حفظ معرف المطور :')
+print('\n\27[0;32m لم يتم حفظ معرف المطور :')
 end 
 os.execute('lua CoBrA.lua')
 end
@@ -106,7 +106,7 @@ cd $HOME/CoBrA
 while(true) do
 rm -fr ../.telegram-cli
 screen -S CoBrA -X kill
-screen -S CoBrA ./CoBrA R
+screen -S CoBrA ./CoBrA
 done
 ]])  
 file:close() 
@@ -138,14 +138,15 @@ end
 _redis = load_redis()  
 --------------------------------------------------------------------------------------------------------------
 print([[
-
-🇮​━━━━━━━━━━🇮​
-  ____      ____        _
- / ___|___ | __ ) _ __ / \
-| |   / _ \|  _ \| '__/ _ \
-| |__| (_) | |_) | | / ___ \
- \____\___/|____/|_|/_/   \_\
-🇮​━━━━━━━━━━🇮​
+  ______             _______              ______  
+ /      \           /       \            /      \ 
+/$$$$$$  |  ______  $$$$$$$  |  ______  /$$$$$$  |
+$$ |  $$/  /      \ $$ |__$$ | /      \ $$ |__$$ |
+$$ |      /$$$$$$  |$$    $$< /$$$$$$  |$$    $$ |
+$$ |   __ $$ |  $$ |$$$$$$$  |$$ |  $$/ $$$$$$$$ |
+$$ \__/  |$$ \__$$ |$$ |__$$ |$$ |      $$ |  $$ |
+$$    $$/ $$    $$/ $$    $$/ $$ |      $$ |  $$ |
+ $$$$$$/   $$$$$$/  $$$$$$$/  $$/       $$/   $$/ 
 تم تطوير وبرمجة السورس :- @hhhhs9
 ]])
 sudos = dofile("./Info.lua") 
@@ -4280,7 +4281,7 @@ t = "\n٭ ✬┆قائمة المميزين 💞💞◟\n☆━━━━━━�
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
-t = t.."𖠵 "..k.." ◜[@"..username.."]◞ .\n"
+t = t.."?? "..k.." ◜[@"..username.."]◞ .\n"
 else
 end
 end
@@ -4538,8 +4539,8 @@ send(msg.chat_id_, msg.id_,'☑️┆ البوت ليس ادمن يرجى ترق
 return false  
 end
 database:sadd(bot_id..'Ban:User'..msg.chat_id_, result.id_)
-usertext = '\n👤┆ المستخدم » ['..result.title_..'](t.me/'..(username or 'GLOBLA')..')'
-status  = '\n☑️┆ تم حظره من المجموعه'
+usertext = '\n✬┆هلو حياتي 💞'
+status  = '\n✬┆تم حظر العضو  💞'
 texts = usertext..status
 chat_kick(msg.chat_id_, result.id_)
 send(msg.chat_id_, msg.id_, texts)
@@ -4588,12 +4589,12 @@ database:sadd(bot_id..'Ban:User'..msg.chat_id_, userid)
 chat_kick(msg.chat_id_, userid)  
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👤┆ العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'CoBrA')..')'
-status  = '\n☑️┆ تم حظره من المجموعه'
+usertext = '\n✬┆هلو حياتي 💞'
+status  = '\n✬┆تم حظر العضو  💞'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
-usertext = '\n👤┆ العضو » '..userid..''
-status  = '\n☑️┆ تم حظره من المجموعه'
+usertext = '\n✬┆هلو حياتي 💞'
+status  = '\n✬┆تم حظر العضو  💞'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 end,nil)   
@@ -4617,8 +4618,8 @@ return false
 end
 database:srem(bot_id..'Ban:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
-usertext = '\n👤┆ العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'CoBrA')..')'
-status  = '\n📮┆ الايدي » `'..result.sender_user_id_..'`\n☑️┆ تم الغاء حظره من هنا'
+usertext = '\n✬┆هلو حياتي 💞'
+status  = '\n✬┆تم الغاء حظر العضو  💞'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = result.sender_user_id_, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
@@ -4646,8 +4647,8 @@ return false
 end
 database:srem(bot_id..'Ban:User'..msg.chat_id_, result.id_)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = result.id_, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
-usertext = '\n👤┆ العضو » ['..result.title_..'](t.me/'..(username or 'CoBrA')..')'
-status  = '\n☑️┆ تم الغاء حظره من هنا'
+usertext = '\n✬┆هلو حياتي 💞'
+status  = '\n✬┆تم الغاء حظر العضو  💞'
 texts = usertext..status
 else
 texts = '⚠┆ لا يوجد حساب بهاذا المعرف'
@@ -4677,12 +4678,12 @@ database:srem(bot_id..'Ban:User'..msg.chat_id_, userid)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = userid, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n👤┆ العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'CoBrA')..')'
-status  = '\n☑️┆ تم الغاء حظره من هنا'
+usertext = '\n✬┆هلو حياتي 💞'
+status  = '\n✬┆تم الغاء حظر العضو  💞'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
-usertext = '\n👤┆لعضو » '..userid..''
-status  = '\n☑️┆ تم الغاء حظره من هنا'
+usertext = '\n✬┆هلو حياتي 💞'
+status  = '\n✬┆تم الغاء حظر العضو  💞'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -5476,7 +5477,7 @@ end
 if text == ("تنزيل ادمن بكل الصلاحيات") and msg.reply_to_message_id_ ~= 0 and BasicConstructor(msg) then
 function start_function(extra, result, success)
 if msg.can_be_deleted_ == false then 
-send(msg.chat_id_, msg.id_,'✬┆البوت ليس ادمن يرجى ترقيتي 💞') 
+send(msg.chat_id_, msg.id_,'✬┆البوت ليس ادمن يرجى ترقيتي ??') 
 return false  
 end
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -8607,7 +8608,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n˹ 𖢊 𝑈𝑠𝑒𝑅 𖡻 '..username..' ま .\n˹ 𖢊 𝑖𝐷 𖡻 '..msg.sender_user_id_..' ま .\n˹ 𖢊 𝑆𝑡𝑎𝑆 𖡻 '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ま .\n˹ 𖢊 𝐴𝑢𝑡𝑂 𖡻 '..Total_Msg(Msguser)..' ま .\n˹ 𖢊 𝑀𝑎𝑠𝐺 𖡻 '..Msguser..' ま .\n˹ 𖢊 𝐸𝑑𝑖𝑇 𖡻 '..edit..' ま .\n˹ 𖢊 𝐺𝑎𝑚𝐸 𖡻 '..NUMPGAME..' ま .]\n')   
+send(msg.chat_id_, msg.id_,'[\n˹ 𖢊 𝑈𝑠??𝑅 𖡻 '..username..' ま .\n˹ 𖢊 𝑖𝐷 𖡻 '..msg.sender_user_id_..' ま .\n˹ 𖢊 𝑆𝑡𝑎𝑆 𖡻 '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ま .\n˹ 𖢊 𝐴𝑢𝑡𝑂 𖡻 '..Total_Msg(Msguser)..' ま .\n˹ 𖢊 𝑀𝑎𝑠𝐺 𖡻 '..Msguser..' ま .\n˹ 𖢊 𝐸𝑑𝑖𝑇 𖡻 '..edit..' ま .\n˹ 𖢊 𝐺𝑎𝑚𝐸 𖡻 '..NUMPGAME..' ま .]\n')   
 end
 end
 
@@ -9968,7 +9969,7 @@ name = string.gsub(name,'☠','💀💀💀💀💀💀💀☠💀💀💀💀�
 name = string.gsub(name,'🐼','👻👻👻🐼👻👻👻👻👻👻👻')
 name = string.gsub(name,'🐇','🕊🕊🕊🕊🕊🐇🕊🕊🕊🕊')
 name = string.gsub(name,'🌑','🌚🌚🌚🌚🌚🌑🌚🌚🌚')
-name = string.gsub(name,'🌚','🌑🌑🌑🌑🌑🌚🌑🌑🌑')
+name = string.gsub(name,'??','🌑🌑🌑🌑🌑🌚🌑🌑🌑')
 name = string.gsub(name,'⭐️','🌟🌟🌟🌟🌟🌟🌟🌟⭐️🌟🌟🌟')
 name = string.gsub(name,'✨','💫💫💫💫💫✨💫💫💫💫')
 name = string.gsub(name,'⛈','🌨🌨🌨🌨🌨⛈🌨🌨🌨🌨')
